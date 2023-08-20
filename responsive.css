@@ -1,0 +1,179 @@
+/*------------------------------------------responsive navbar-----------------------------------------*/
+@media (max-width: 990px){
+    .navLink{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .navbar-collapse .navLink a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .logo img{
+        width: 120px;
+        height: 30px;
+    }
+
+/*-----------------------------------------Responsive Home------------------------------------------*/
+    
+    .container{
+        padding: 0;
+    }
+    .myDetails{
+        margin-top: 50px;
+    }
+    .my-image{
+        margin-top: 150px;
+        width: 300px;
+        height: 300px;
+    }
+    .my-image img{
+        width: 300px;
+        height: 300px;
+    }
+    .neon-glow-wrapper{
+        width: 300px;
+        height: 300px;
+    }
+    .neon-glow-wrapper2   {
+        width: 320px;
+        height: 320px;
+    }
+/*-----------------------------------------Skills------------------------------------------*/
+    .heading2{
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    
+/*---------------------------------Portfolio---------------------------------*/
+    .main-text {
+        padding-top: 50px;
+    }
+
+    .imgBox{
+        margin-bottom: 10px;
+    }
+    .imgBox:hover {
+        width: 400px;
+        margin-bottom: 75px;
+    }
+    .main-text h2 {
+        font-size: 40px;
+    }
+    .layer{
+        left: 0px;
+    }
+}
+
+    
+
+
+@media only screen and (max-width: 768px) {
+    /*---------------------------------Portfolio---------------------------------*/
+    .main-text {
+        padding-top: 30px;
+    }
+    .main-text h2 {
+        font-size: 30px;
+    }
+    .imgBox{
+        margin-bottom: 10px;
+    }
+    .imgBox:hover {
+        width: 400px;
+        margin-bottom: 75px;
+    }
+}
+
+@media (max-width: 575px){
+    .myInfo h3{
+        font-size: 22px;
+    }
+    .myInfo h1{
+        font-size: 36px;
+    }
+    .myInfo p{
+        font-size: 16px;
+    }
+    .my-image{
+        margin-top: 50px;
+        width: 200px;
+        height: 200px;
+    }
+    .my-image img{
+        width: 200px;
+        height: 200px;
+    }
+    .neon-glow-wrapper{
+        width: 200px;
+        height: 200px;
+    }
+    .neon-glow-wrapper2   {
+        width: 220px;
+        height: 220px;
+    }
+    .home-section .row .myDetails{
+        order: 2;
+    }
+    .home-section .row .my-image {
+        order: 1;
+    }
+/*-----------------------------------------Skills------------------------------------------*/
+    .sub-title{
+        text-align: center;
+        font-size: 35px;
+        padding-bottom: 40px;
+    }
+/*-----------------------------------------Skills------------------------------------------*/
+    .radial-bars .radial-bar svg{
+        width: 80px;
+        height: 120px;
+    }
+    .radial-bar .text{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        left: 40%;
+        font-size: 14px;
+    }
+    .heading1, .heading2{
+        font-size: 25px
+    }
+    
+/*---------------------------------Contact---------------------------------*/
+    .contact-form{
+        padding-left: 10px;
+    }
+    .contact-text h2{
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    .contact-text h4{
+        margin: 10px;
+        font-size: 16px;
+    }
+    .contact-text p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .contact-list li{
+        margin-bottom: 0rem;
+    }
+    .contact-icons{
+        margin-top: -40px;
+    }.contact-form form .send{
+        height: 33px;
+        padding: 5px;
+        margin: 0;
+        font-size: 16px;
+    }
+    .footer{
+        width: 75%;
+    }
+    .footer .text-light{
+        text-align: center;
+    }
+ 
+}
+

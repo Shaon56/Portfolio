@@ -1,0 +1,1009 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    color: #ededed;
+    background: linear-gradient(90deg, #1b052c, #c203fc);
+}
+
+/*--------------------------------Header-----------------------------------*/
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: linear-gradient(90deg, #200733, #c203fc);;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo img{
+    width: 240px;
+    height: 60px;
+}
+.logo{
+    position: relative;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navLink{
+    margin-left: 30%;
+    margin-right: 10%;
+}
+.navLink a{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+.navLink a:hover{
+    color: #0ef;
+}
+
+
+
+/*----------------------Header Animation------------------*/
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/*----------------------------------Home---------------------------------*/
+
+.home-section{
+    margin-top: 0%;
+    margin-bottom: 200px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px ;
+    flex-wrap: wrap;
+}
+/*---------------------------------Home Content---------------------------------*/
+
+.myInfo h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #ededed;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+.myInfo h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.myInfo h3 span{
+    color: #0ef;
+}
+.myInfo h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: #ededed;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.myInfo p{
+    font-size: 20px;
+    color: #ededed;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+.home-sci a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px #00ff2a,
+    0 0 25px #00ff2a, 0 0 50px #00ff2a,
+    0 0 100px #00ff2a, 0 0 200px #00ff2a;
+    background: #00ff2a;
+}
+
+
+/*----------------------Home Content Animation------------------*/
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+/*------------------------My image---------------------------*/
+
+.my-image{
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.my-image img{
+    width: 400px;
+    height: 400px;
+}
+/*------------------------for glowing image---------------------------*/
+
+.neon-glow-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    animation: moveGlow 10s infinite linear;
+}
+.neon-glow {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #00ffe6;
+    border-radius: 50%;
+}
+.neon-glow::before {
+    content: "";
+    position: absolute;
+    width: 20px;  /* Size of the neon dot */
+    height: 20px;
+    background-color: linear-gradient(#9003fc,  #03a1fc);
+    border-radius: 50%;
+    top: -10px;  /* Position it outside the circle */
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Neon glow effect */
+    box-shadow: 0 0 10px #00ff2a,
+        0 0 20px #00ff2a,
+        0 0 30px #00ff2a,
+        0 0 40px #00ff2a,
+        0 0 70px #00ff2a,
+        0 0 80px #00ff2a,
+        0 0 100px #00ff2a,
+        0 0 150px #00ff2a;
+    
+}
+
+.neon-glow-wrapper2{
+    /*position: absolute;*/
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 420px;
+    height: 420px;
+    animation: moveGlow2 10s infinite linear;
+}
+.neon-glow2 {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #00ff2a;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00ff2a,
+        0 0 25px #00ff2a;
+}
+.neon-glow2::before {
+    content: "";
+    position: absolute;
+    width: 20px;  /* Size of the neon dot */
+    height: 20px;
+    background-color: linear-gradient(#9003fc,  #03a1fc);
+    border-radius: 50%;
+    top: -10px;  /* Position it outside the circle */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 
+        0 0 10px #00ffe6,
+        0 0 20px #00ffe6,
+        0 0 30px #00ffe6,
+        0 0 40px #00ffff,
+        0 0 70px #00ffff,
+        0 0 80px #00ffff,
+        0 0 100px #00ffff,
+        0 0 150px #00ffff;
+   
+}
+/*----------------------Img Glowing Animation------------------*/
+@keyframes moveGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(75deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(255deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes moveGlow2 {
+    0% {
+        transform: rotate(-360deg);
+    }
+    25% {
+        transform: rotate(-255deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-75deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+/*-----------------------------------------About Me------------------------------------------*/
+
+
+.no-border {
+    border: none !important;
+    box-shadow: none !important;
+}
+.card{
+    border: none !important;
+    box-shadow: none !important;
+}
+.card-body{
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 00px;
+}
+.image{
+    width: 20%;
+    margin-top: 100px;
+}
+.about-img{
+    margin: 20px 20px 20px 20px;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    box-shadow: /*0 0 5px #00ff2a,
+                0 0 25px #00ff2a;*/
+                 0 0 25px #ff28bf,     /* Right shadow */
+                 0 0 45px #00ff2a,   /* Left shadow */
+                0 0 25px #ff28bf,   /* Bottom shadow */
+                0 0 45px #00ff2a;
+}
+.about-img:hover{
+    box-shadow: 0 0 100px #0ef,
+                0 0 150px #0ef;
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 330px; 
+}
+.about-text{
+    text-align: justify;
+}
+.about-text h2{
+    color: #fff;
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #0ef;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 0 1rem 4rem 0;
+    text-align: justify;
+}
+.about-text p span{
+    font-size: 22px;
+    text-shadow: 5px 5px 10px #00ff00;
+}
+
+@media(max-width:990px){
+    .image{
+        margin-top: 50px;
+    }
+    .card-body{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 00px;
+    }
+}
+@media(max-width:540px){
+    .image{
+        margin-left: 20%;
+    }
+    .about-img{
+        margin: 20px 20px 20px 20px;
+        width: 200px;
+        height: 200px;
+    }
+    .about-img img{
+        max-width: 200px; 
+    }
+    .about-text h2{
+        font-size: 40px;
+    }
+    .about-text h4{
+        font-size: 20px;
+    }
+    .about-text p{
+        font-size: 14px;
+    }
+    .about-text p span{
+        font-size: 18px;
+    }
+}
+
+
+/*---------------------------------Services---------------------------------*/
+
+#container{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title, .services-list h2{
+    color: #f0f8ff;
+}
+.sub-title span{
+    color: #0ef;
+}
+.container{
+    padding: 90px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7;
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 20px #3ac53a,
+                1px 1px 40px #3bc251;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #00ff2a;
+    display: flex;
+    justify-content: center;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.services-list div p{
+    color: #f0f8ff;
+    text-align: justify;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+.read:hover{
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef,
+    0 0 50px #0ef,
+    0 0 100px #0ef,
+    0 0 200px #0ef;
+}
+
+
+
+/*---------------------------------Skills---------------------------------*/
+
+
+.sub-title{
+    margin-top: 100px;
+}
+#Skills{
+    /*height: 500px;*/
+    padding: 50px 60px;
+    margin-top: -50px;
+    margin-bottom: 150px;
+}
+.heading1, .heading2{
+    color: #abd8ff;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar{
+    margin-top: 40px 0;
+}
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span{
+    color: #f0f8ff;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 75%;
+}
+.progress-line.bootstrap span{
+    width: 82%;
+}
+.progress-line.java-script span{
+    width: 70%;
+}
+.progress-line.react span{
+    width: 50%;
+}
+.progress-line.java span{
+    width: 60%;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "75%";
+}
+.progress-line.bootstrap span::after{
+    content: "82%";
+}
+.progress-line.java-script span::after{
+    content: "70%";
+}
+.progress-line.react span::after{
+    content: "50%";
+}
+.progress-line.java span::after{
+    content: "60%";
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: #000;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s forwards;
+}
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path1{animation: animate-path1 1s 1s linear forwards;}
+.path2{animation: animate-path2 1s 1s linear forwards;}
+.path3{animation: animate-path3 1s 1s linear forwards;}
+.path4{animation: animate-path4 1s 1s linear forwards;}
+
+.radial-bar .percentage{
+    color: #f0f8ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.radial-bar .text{
+    color: #f0f8ff;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;/*   total value is 500. now 500-500*90%=50   */
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 150;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+
+@media(max-width:540px){
+    
+}
+
+
+/*---------------------------------Portfolio---------------------------------*/
+
+#Project {
+    width: 100%;
+}
+.portfolio {
+    width: 100%;
+}
+.main-text {
+    width: 100%;
+    padding-top: 130px;
+    margin-top: 0px;
+}
+.main-text h2 {
+    font-size: 60px;
+    color: #f0f8ff;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main-text h2 span {
+    color: #0ef;
+}
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.imgBox {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.7s;
+    margin-bottom: 200px;
+}
+.imgBox:hover {
+    height: 270px;
+    width: 350px;
+    margin-bottom: 156px;
+}
+.imgBox img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.imgBox:hover img {
+    transform: scale(1.1);
+    
+}
+.layer h5{
+    color: #33ff00;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.layer p{
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1;
+}
+.layer {
+    width: 100%;
+    max-height: 0;
+    background: linear-gradient(#0000001a, #0051ff);
+    border-radius: 8px 8px 35px 35px;
+    text-align: center;
+    position: absolute;
+    left: -36px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transform: translateY(100%); /* Initially pushes the content down */
+    padding: 0 40px;
+    transition: transform 0.5s, max-height 0.5s;
+}
+.imgBox:hover .layer {
+    transform: translateY(0);  /* Pulls up the content on hover */
+    max-height: 500px; /* Arbitrary large value to ensure content becomes visible */
+}
+.layer a{
+    margin-top: 16px;
+    background: #b6f6ff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 40%;
+}
+.layer a i{
+    color: #ff004f;
+    font-size: 16px;
+}
+/* Responsive Design */
+
+/*---------------------------------Contact---------------------------------*/
+.contact{
+    padding-left: 30px;
+    margin-top: 130px;
+}
+.contact-text h2{
+    color: #fff;
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+.contact-text h2 span{
+    color: #0ef;
+}
+.contact-text h4{
+    margin: 15px;
+    color: #e4e4e4;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.contact-text p{
+    color: #b1b1b1;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+.contact-list{
+    margin-bottom: 3rem;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+.contact-list li i{
+    display: inline-block;
+    color: #0ef;
+    font-size: 35px;
+    font-weight: 300;
+    transition: all 0.4s ease;
+}
+.contact-list li p{
+    margin-left: 10px;
+    color: #8dffec;
+}
+.contact-list li i:hover{
+    font-size: 30px;
+    font-weight: 300;
+}
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i))
+}
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+.contact-form form{
+    position: relative;
+}
+.contact-form form input, form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+.contact-form form .send{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    background: transparent;
+    color: #0ef;
+    border: 1px dotted #00ff2a;
+    border-radius: 40px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+.contact-form form .send:hover{
+    color: #000;
+    background: #40F8FF;
+    box-shadow: 0 0 5px #0ef,
+    0 0 10px #0ef,
+    0 0 20px #0ef,
+    0 0 40px #0ef,
+    0 0 80px #0ef;
+}
+
+
+.footer{
+    width: 90%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px  0 0 50px;
+    border-top: 1px solid #00ff00;
+}
+.footer .text-light span{
+    margin-top: 10px;
+    color: #00ff00;
+    font-size: 20px;
+    text-shadow: 5px 5px 10px #00ff00;
+    display: flex;
+    justify-content: center;
+    text-shadow: 5px 5px 10px #00ff00;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
