@@ -11,17 +11,13 @@ body{
 
 /*--------------------------------Header-----------------------------------*/
 
-
-.navbar{
+.navigation-wrap{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: linear-gradient(90deg, #200733, #c203fc);;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: linear-gradient(90deg, #200733, #c203fc);
     z-index: 100;
 }
 .logo img{

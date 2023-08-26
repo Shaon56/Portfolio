@@ -70,6 +70,7 @@
 
 
 @media only screen and (max-width: 768px) {
+    
     /*---------------------------------Portfolio---------------------------------*/
     .main-text {
         padding-top: 30px;
@@ -87,6 +88,7 @@
 }
 
 @media (max-width: 575px){
+    
     .myInfo h3{
         font-size: 22px;
     }
